@@ -1,3 +1,4 @@
+#####################################################################################################################
 #IMPORTS
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -12,6 +13,11 @@ from django.contrib.auth import login,logout,authenticate
 #VISTA INICIO
 def Inicio (request):
     return render(request, "inicio.html")
+
+
+#################################################################################################################
+
+#POSTS
 
 def post1 (request):
     return render(request, "post1.html")
@@ -74,3 +80,13 @@ def register_request(request):
 
 
 ##################################################################################################################
+
+#Contacto  ---> Solo se puede hacer contacto cuando se esta logeado
+def Contactar (request):
+    return render(request, "contact.html")
+
+#About
+def About(request):
+    return render(request, "About.html")
+
+#####################################################################################################################
